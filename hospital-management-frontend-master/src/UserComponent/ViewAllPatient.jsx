@@ -22,21 +22,41 @@ const ViewAllPatient = () => {
     return response.data;
   };
 
-  const deletePatient = (patientId) => {
-    fetch("http://localhost:8080/api/user/delete/id?userId=" + patientId, {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    }).then((result) => {
-      result.json().then((res) => {
-        alert(res.responseMessage);
-      });
-    });
+  // const deletePatient = (patientId) => {
+  //   fetch("http://localhost:8080/api/user/delete/id?userId=" + patientId, {
+  //     method: "GET",
+  //     headers: {
+  //       Accept: "application/json",
+  //       "Content-Type": "application/json",
+  //     },
+  //   }).then((result) => {
+  //     result.json().then((res) => {
+  //       alert(res.responseMessage);
+  //     });
+  //   });
 
-    window.location.reload(true);
-  };
+  //   window.location.reload(true);
+  // };
+  const deletePatient = (patientId) => {
+  if (!window.confirm("Are you sure you want to delete this patient?")) return;
+
+  fetch(`http://localhost:8080/api/user/delete/id?userId=${patientId}`, {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+    },
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      alert(res.responseMessage || "Patient deleted successfully");
+      window.location.reload(); // Refresh to reflect changes
+    })
+    .catch((err) => {
+      console.error("Failed to delete patient:", err);
+      alert("Something went wrong while deleting the patient.");
+    });
+};
+
 
   return (
     <div className="mt-3">

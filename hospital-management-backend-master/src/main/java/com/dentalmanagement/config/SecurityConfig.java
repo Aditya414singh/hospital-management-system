@@ -31,8 +31,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService);
     }
+
     @Bean
-    public PasswordEncoder passwordEncoder(){
+    public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
@@ -45,22 +46,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-        .csrf().disable()
-        .authorizeRequests()
-        .anyRequest().permitAll()
-//        .antMatchers("/api/user/greeting",
-//        		     "/api/location/add",
-//        		     "/api/facility/add",
-//                     "/api/hotel/add")
-//                     .hasAuthority("admin")
-  //      .antMatchers("/greeting").permitAll()
-//        .antMatchers("/api/book/hotel/")
-//                .hasAuthority("Customer")
-        .and()
-        .exceptionHandling()
-        .and()
-        .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-        
+            .cors() // ✅ CORS enabled here
+            .and()
+            .csrf().disable()
+            .authorizeRequests()
+            .anyRequest().permitAll()
+            .and()
+            .exceptionHandling()
+            .and()
+            .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+
         http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
     }
 }

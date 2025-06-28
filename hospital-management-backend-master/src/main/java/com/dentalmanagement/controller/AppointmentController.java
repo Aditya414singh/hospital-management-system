@@ -355,6 +355,7 @@ public class AppointmentController {
 
 		appointment.setDoctorId(request.getDoctorId());
 		appointment.setStatus(AppointmentStatus.ASSIGNED_TO_DOCTOR.value());
+		
 
 		Appointment updatedAppointment = this.appointmentService.addAppointment(appointment);
 

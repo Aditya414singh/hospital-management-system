@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 const DoctorCard = (doctor) => {
   return (
     <div className="col">
-      <div class="card border-color rounded-card card-hover product-card custom-bg h-100">
+      <div className="card border-color rounded-card card-hover product-card custom-bg h-100">
         <img
           src={"http://localhost:8080/api/doctor/" + doctor.item.doctorImage}
-          class="card-img-top rounded mx-auto d-block m-2"
+          className="card-img-top rounded mx-auto d-block m-2"
           alt="img"
           style={{
             maxHeight: "270px",
@@ -15,26 +15,26 @@ const DoctorCard = (doctor) => {
           }}
         />
 
-        <div class="card-body text-color">
-          <h5 class="card-title">
+        <div className="card-body text-color">
+          <h5 className="card-title">
             <div>
               <b>{doctor.item.firstName + " " + doctor.item.lastName}</b>
             </div>
           </h5>
 
-          <p class="text-color">
+          <p className="text-color">
             <b>
               <i>Specialist :</i> {doctor.item.specialist}
             </b>
           </p>
 
-          <p class="text-color">
+          <p className="text-color">
             <b>
               <i>Experience :</i> {doctor.item.experience}
             </b>
           </p>
 
-          <p class="text-color">
+          <p className="text-color">
             <b>
               <i>Age :</i> {doctor.item.age}
             </b>

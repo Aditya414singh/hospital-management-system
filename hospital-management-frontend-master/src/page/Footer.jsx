@@ -79,7 +79,7 @@ const Footer = () => {
         </div>
 
         <div className="text-center pb-3">
-          <b>A5P</b>
+          <b>TEAM A5P</b>
         </div>
       </footer>
     </div>

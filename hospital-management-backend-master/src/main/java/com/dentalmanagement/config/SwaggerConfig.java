@@ -25,8 +25,8 @@ public class SwaggerConfig {
 
     private ApiInfo metaData() {
         return new ApiInfoBuilder()
-                .title("Code With Murad - Spring Boot Swagger Configuration")
-                .description("\"Swagger configuration for Dental Management\"")
+                .title("Dive into Dev with ADITYA - Spring Boot Swagger Configuration")
+                .description("\"Swagger configuration for Hospital Management\"")
                 .version("1.1.0")
                 .license("Apache 2.0")
                 .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0\"")

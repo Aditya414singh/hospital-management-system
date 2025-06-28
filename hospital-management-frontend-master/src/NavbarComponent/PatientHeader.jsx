@@ -22,7 +22,7 @@ const PatientHeader = () => {
   };
 
   return (
-    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-5">
+    <ul className="navbar-nav ms-auto mb-2 mb-lg-0 me-5">
 
       <li className="nav-item">
         <Link to="patient/appointment/take" className="nav-link active" aria-current="page">
