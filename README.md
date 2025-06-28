@@ -1,61 +1,96 @@
-# DOC-CHAT: Hospital Management Platform
-DOC-CHAT is a comprehensive hospital management platform designed to facilitate patient-doctor interactions and streamline hospital processes. It provides an online platform for consultations, blood donor registration, and real-time blood availability tracking, making it an essential tool during health crises like COVID-19.
+# 🩺 DOC-CHAT:Hospital Management System
 
-## Features
-### Patient-Doctor Interaction:
+**DOC-CHAT** is a comprehensive web-based hospital management system that enables patients to register online, book appointments, and consult doctors virtually. Built for seamless communication between patients and doctors, it offers a real-time interface for managing treatments, prescriptions, and remote consultations via video calls.
 
-Patients can easily check doctor availability and timings for appointments.
-Seamless communication between patients and doctors for online consultations.
-### Crisis Management:
+## 🌐 Live Demo
 
-Effective platform for virtual doctor-patient interactions during emergencies such as the COVID-19 pandemic.
-### Blood Donor Management:
+🔗 **Frontend (Live on Vercel):**  
+[https://hospital-management-system-gamma-nine.vercel.app](https://hospital-management-system-gamma-nine.vercel.app)
 
-A feature that allows blood donors to register and manage their personal information.
-Real-time records of blood availability are maintained to ensure quick response during emergencies.
-## How to Use
-Doctor Availability: Patients can view and book appointments based on doctors' available schedules.
-Online Consultations: Enables virtual meetings between doctors and patients through an integrated platform.
-Blood Donation: Blood donors can register and keep their details updated. Hospitals can view the availability of blood for urgent needs.
-## Tech Stack
-### Frontend:
+⚙️ **Backend (Spring Boot):** *Deployment in progress*
 
-HTML
-CSS
-JavaScript
-React.js
-### Backend:
+---
 
-Spring Boot
-### Database:
+## 🚀 Features
 
-SQL
-## How to Run
-Clone the repository:
+### 👥 Patient & Doctor Portal
+- **Patients** can register themselves online and book appointments based on availability.
+- **Doctors** can view assigned appointments and update prescriptions or treatment status.
 
-`git clone https://github.com/yourusername/DOC-CHAT.git`
+### 🗓️ Appointment System
+- Admins can view all pending appointments and assign them to appropriate doctors.
+- Patients can view all their appointments and check their status (Pending, Assigned, Done).
 
-Install necessary dependencies for the backend:
+### 🎥 Real-Time Video Consultation
+- Integrated with **Jitsi Meet** for secure video calls.
+- Doctors initiate meetings; patients can join directly from their dashboard.
 
-`cd backend
-mvn install`
+### 🔐 Role-Based Access Control
+- **Admin:** Manage user registration, doctors, and appointment assignment.
+- **Doctor:** View appointments, treat patients, and write prescriptions.
+- **Patient:** Register, book appointments, and join video consultations.
 
-Run the Spring Boot application:
+---
 
-`mvn spring-boot:run`
+## 🧠 Tech Stack
 
-Navigate to the frontend directory and install dependencies:
+### 🌐 Frontend
+- React.js, React Router
+- Bootstrap, HTML/CSS
+- Axios for API communication
 
-`cd frontend
-npm install`
+### ⚙ Backend
+- Spring Boot (Java)
+- REST APIs using JPA/Hibernate
 
-Run the frontend:
+### 🗃 Database
+- MySQL
 
-`npm start`
+---
 
-## Contributions
-Contributions and feedback are welcome! Feel free to open issues or submit pull requests for new features or bug fixes.
+## 📦 Folder Structure
 
-## License
-This project is licensed under the MIT License.
+hospital-management-system/
+├── hospital-management-frontend-master/ # React Frontend
+└── hospital-management-backend-master/ # Spring Boot Backend
 
+
+---
+
+## 🛠️ How to Run Locally
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Aditya414singh/hospital-management-system.git
+```
+2. Start Backend (Spring Boot)
+bash
+Copy
+Edit
+cd hospital-management-backend-master
+mvn install
+mvn spring-boot:run
+3. Start Frontend (React)
+bash
+Copy
+Edit
+cd hospital-management-frontend-master
+npm install
+npm start
+Visit: http://localhost:3000
+
+---
+
+## 🚀 About the Developer
+
+Hi, I'm **Aditya Singh Gahlaut** — a passionate full-stack developer and problem solver from IIIT Lucknow. I love building end-to-end products, crafting clean UIs, and solving real-world problems through code.
+
+### 🔗 Connect with Me
+
+- [GitHub](https://github.com/Aditya414singh)
+- [LinkedIn](https://linkedin.com/in/aditya-singh-gahlaut-7550a9257)
+- [Portfolio](https://portfolio-blue-zeta-37.vercel.app)
+
+> 📌 _Built with 💙 using React, Node.js, Express, MySQL (Frontend), and Spring Boot (Backend)JAVA._
+
+---
